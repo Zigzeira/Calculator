@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            font: normal 25pt Arial ;
+            background-color:black ;
+            color: white;
+        } 
+        div#res {
+            margin-top: 20px ;
+        }
+        input {
+            color:black ;
+            background-color:orange ;
+            font: normal 15pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn3" id="txtn3">
+    <input type="button" value="somar" onclick="somar()">
+    <input type="button" value="Subtração" onclick="sub()">
+    <input type="button" value="Multiplicação" onclick="multi()">
+    <input type="button" value="divisão" onclick="divi()">
+    <input type="button" value="elevado" onclick="elev()">
+    <div id = 'res'>Resultado:</div>
+
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txtn3')
+            var res = window.document.getElementById('res')
+            var n1 =Number(tn1.value) 
+            var n2 =Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML =`A soma entre ${n1} e ${n2} é ${s}`
+        }
+        function sub() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txtn3')
+            var res = window.document.getElementById('res')
+            var n1 =Number(tn1.value) 
+            var n2 =Number(tn2.value)
+            var sub = n1 - n2
+            res.innerHTML =`A Subtração entre ${n1} e ${n2} é ${sub}`
+        }
+        function multi() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txtn3')
+            var res = window.document.getElementById('res')
+            var n1 =Number(tn1.value)  
+            var n2 =Number(tn2.value)
+            var mul = n1 * n2
+            res.innerHTML =`A multiplicação entre ${n1} e ${n2} é ${mul}`
+        } 
+        function divi() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txtn3')
+            var res = window.document.getElementById('res')
+            var n1 =Number(tn1.value) 
+            var n2 =Number(tn2.value)
+            var di = n1 / n2
+            res.innerHTML =`A divisão entre ${n1} e ${n2} é ${di}`
+        }
+        function elev() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn3')
+            var res = window.document.getElementById('res')
+            var n1 =Number(tn1.value)
+            var n2 =Number(tn2.value)
+            var ele = n1 ** n2
+            res.innerHTML = `${n1} elevado a ${n2} é ${ele}`
+        }
+
+        
+
+    </script>
+    
+</body>
+</html>
